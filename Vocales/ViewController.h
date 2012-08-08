@@ -31,4 +31,9 @@
 
 - (IBAction)homeButtonPressed:(UIButton *)sender;
 
+@property (strong, nonatomic) NSString *lastPress;
+
+- (IBAction)womanPressed:(UIButton *)sender;
+- (IBAction)babyPressed:(UIButton *)sender;
+
 @end

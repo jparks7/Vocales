@@ -193,7 +193,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="diI-yc-NIG"/>
+                                    <action selector="babyPressed:" destination="2" eventType="touchUpInside" id="Ogk-dt-EFF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mQb-7m-Nqx">
@@ -208,7 +208,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="ezz-tz-q8Z"/>
+                                    <action selector="womanPressed:" destination="2" eventType="touchUpInside" id="DWO-JN-6Gj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GSx-u0-Dqi">
@@ -246,7 +246,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-394" y="127"/>
+            <point key="canvasLocation" x="-493" y="128"/>
         </scene>
     </scenes>
     <resources>
@@ -266,28 +266,6 @@
         <image name="ostra.png" width="300" height="300"/>
         <image name="unicornio.png" width="512" height="512"/>
     </resources>
-    <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="homeButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="aButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="avionOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="babyOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="elefanteOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="iButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="iguanaOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="manOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="oButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="ostraOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="uButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="unicornioOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="womanOutlet" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
