@@ -44,6 +44,8 @@
 		5BCB0AB415D4149F005B6759 /* osoman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AB115D4149F005B6759 /* osoman.mp3 */; };
 		5BCB0AB515D4149F005B6759 /* osowoman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AB215D4149F005B6759 /* osowoman.mp3 */; };
 		5BCB0AB715D4182E005B6759 /* oso.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AB615D4182E005B6759 /* oso.png */; };
+		5BCB0ABD15D42094005B6759 /* opening2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0ABC15D42094005B6759 /* opening2.mp4 */; };
+		5BCB0ABF15D42154005B6759 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCB0ABE15D42154005B6759 /* MediaPlayer.framework */; };
 		5BDC47F915D2B28600F01FA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDC47F815D2B28600F01FA3 /* AVFoundation.framework */; };
 		5BDC47FB15D2B4DD00F01FA3 /* aBabyVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC47FA15D2B4DC00F01FA3 /* aBabyVoice.mp3 */; };
 		5BDC481415D2BE8000F01FA3 /* avionBaby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC481315D2BE8000F01FA3 /* avionBaby.mp3 */; };
@@ -60,7 +62,6 @@
 		5BDC483815D2FA7F00F01FA3 /* unicorniowoman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC483515D2FA7F00F01FA3 /* unicorniowoman.mp3 */; };
 		5E92025D15D2127400C78FFA /* Port. launch img.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E92025B15D2127400C78FFA /* Port. launch img.png */; };
 		5E92025E15D2127400C78FFA /* Vocal app icon 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E92025C15D2127400C78FFA /* Vocal app icon 114.png */; };
-		5E92026115D212C400C78FFA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E92026015D212C400C78FFA /* Default@2x.png */; };
 		5E92026515D212EE00C78FFA /* Vocal app icon 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E92026415D212EE00C78FFA /* Vocal app icon 114.png */; };
 		E3CBE76115D1ECC400F2DB45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CBE76015D1ECC400F2DB45 /* UIKit.framework */; };
 		E3CBE76315D1ECC400F2DB45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CBE76215D1ECC400F2DB45 /* Foundation.framework */; };
@@ -111,6 +112,8 @@
 		5BCB0AB115D4149F005B6759 /* osoman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = osoman.mp3; sourceTree = SOURCE_ROOT; };
 		5BCB0AB215D4149F005B6759 /* osowoman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = osowoman.mp3; sourceTree = SOURCE_ROOT; };
 		5BCB0AB615D4182E005B6759 /* oso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oso.png; path = Images/oso.png; sourceTree = SOURCE_ROOT; };
+		5BCB0ABC15D42094005B6759 /* opening2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = opening2.mp4; sourceTree = SOURCE_ROOT; };
+		5BCB0ABE15D42154005B6759 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		5BDC47F815D2B28600F01FA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5BDC47FA15D2B4DC00F01FA3 /* aBabyVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = aBabyVoice.mp3; path = ../aBabyVoice.mp3; sourceTree = "<group>"; };
 		5BDC481315D2BE8000F01FA3 /* avionBaby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = avionBaby.mp3; sourceTree = SOURCE_ROOT; };
@@ -151,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCB0ABF15D42154005B6759 /* MediaPlayer.framework in Frameworks */,
 				5BDC47F915D2B28600F01FA3 /* AVFoundation.framework in Frameworks */,
 				E3CBE76115D1ECC400F2DB45 /* UIKit.framework in Frameworks */,
 				E3CBE76315D1ECC400F2DB45 /* Foundation.framework in Frameworks */,
@@ -192,6 +196,7 @@
 		E3CBE75115D1ECC400F2DB45 = {
 			isa = PBXGroup;
 			children = (
+				5BCB0ABE15D42154005B6759 /* MediaPlayer.framework */,
 				5BDC47F815D2B28600F01FA3 /* AVFoundation.framework */,
 				5E92026415D212EE00C78FFA /* Vocal app icon 114.png */,
 				5E92026215D212CD00C78FFA /* Default.png */,
@@ -261,6 +266,7 @@
 				5BCB0AB015D4149F005B6759 /* osobaby.mp3 */,
 				5BCB0AB115D4149F005B6759 /* osoman.mp3 */,
 				5BCB0AB215D4149F005B6759 /* osowoman.mp3 */,
+				5BCB0ABC15D42094005B6759 /* opening2.mp4 */,
 				5BDC47FC15D2B5FC00F01FA3 /* Images */,
 				E3CBE76715D1ECC400F2DB45 /* Supporting Files */,
 			);
@@ -334,7 +340,6 @@
 				E3CBE77715D1ECC400F2DB45 /* MainStoryboard_iPad.storyboard in Resources */,
 				5E92025D15D2127400C78FFA /* Port. launch img.png in Resources */,
 				5E92025E15D2127400C78FFA /* Vocal app icon 114.png in Resources */,
-				5E92026115D212C400C78FFA /* Default@2x.png in Resources */,
 				5E92026515D212EE00C78FFA /* Vocal app icon 114.png in Resources */,
 				5BDC47FB15D2B4DD00F01FA3 /* aBabyVoice.mp3 in Resources */,
 				5BDC481415D2BE8000F01FA3 /* avionBaby.mp3 in Resources */,
@@ -386,6 +391,7 @@
 				5BCB0AB415D4149F005B6759 /* osoman.mp3 in Resources */,
 				5BCB0AB515D4149F005B6759 /* osowoman.mp3 in Resources */,
 				5BCB0AB715D4182E005B6759 /* oso.png in Resources */,
+				5BCB0ABD15D42094005B6759 /* opening2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

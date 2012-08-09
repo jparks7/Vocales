@@ -25,6 +25,7 @@
 @end
 
 @implementation ViewController
+@synthesize openPlayer = _openPlayer;
 @synthesize unicornioOutlet;
 @synthesize iguanaOutlet;
 @synthesize oButtonOutlet;
@@ -51,42 +52,70 @@
 @synthesize lastPress;
 @synthesize homeButton;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.\
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    NSURL *url = [[NSBundle mainBundle]
+                  URLForResource:@"opening2" withExtension:@"mp4"];
+    self.openPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    self.openPlayer.controlStyle = MPMovieControlStyleNone;
+    self.openPlayer.shouldAutoplay = YES;
+    [self.openPlayer prepareToPlay];
+    
+    self.openPlayer.view.frame =self.view.bounds;
+    self.openPlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.openPlayer.view];
+    [self.openPlayer play];
+    
+    ViewController __weak *weakself = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:MPMoviePlayerPlaybackDidFinishNotification
+                                                      object:self.openPlayer
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note)
+     {
+         [[NSNotificationCenter defaultCenter] removeObserver:weakself
+                                                         name:MPMoviePlayerPlaybackDidFinishNotification object:weakself.openPlayer];
+         [weakself.openPlayer.view removeFromSuperview];
+         
+     }];
+
+
+    
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.aButtonOutlet.frame = CGRectMake(130, 91, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.uButtonOutlet.frame = CGRectMake(130, 310, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.eButtonOutlet.frame = CGRectMake(20, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.iButtonOutlet.frame = CGRectMake(130, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.oButtonOutlet.frame = CGRectMake(240, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.homeButton.frame = CGRectMake(20, 20, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");

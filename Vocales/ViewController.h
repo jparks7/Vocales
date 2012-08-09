@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AVFoundation/AVAudioPlayer.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) MPMoviePlayerController * openPlayer;
 @property (weak, nonatomic) IBOutlet UIButton *aButtonOutlet;
+
 
 - (IBAction)buttonPressed:(UIButton *)sender;
 
