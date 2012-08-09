@@ -35,5 +35,6 @@
 
 - (IBAction)womanPressed:(UIButton *)sender;
 - (IBAction)babyPressed:(UIButton *)sender;
+- (IBAction)manPressed:(UIButton *)sender;
 
 @end

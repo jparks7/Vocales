@@ -180,6 +180,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manPressed:" destination="2" eventType="touchUpInside" id="Sb4-H4-Htv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XLp-2i-iwz">
                                 <rect key="frame" x="130" y="500" width="60" height="60"/>
@@ -246,7 +249,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-493" y="128"/>
+            <point key="canvasLocation" x="-653" y="129"/>
         </scene>
     </scenes>
     <resources>

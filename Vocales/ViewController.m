@@ -20,6 +20,7 @@
 @property (nonatomic, strong) AVAudioPlayer *player7;
 @property (nonatomic, strong) AVAudioPlayer *player8;
 @property (nonatomic, strong) AVAudioPlayer *player9;
+@property (nonatomic, strong) AVAudioPlayer *player10;
 
 @end
 
@@ -46,6 +47,7 @@
 @synthesize player7;
 @synthesize player8;
 @synthesize player9;
+@synthesize player10;
 @synthesize lastPress;
 
 - (void)viewDidLoad
@@ -101,6 +103,8 @@
     NSURL *fileURL8 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"iguanababy" ofType:@"mp3"]];
     
     NSURL *fileURL9 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"unicorniobaby" ofType:@"mp3"]];
+    
+    NSURL *fileURL28 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"osobaby" ofType:@"mp3"]];
     
     
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
@@ -165,6 +169,13 @@
     }
     
     player9.prepareToPlay;
+    
+    self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL28 error:nil];
+    if (self.player10) {
+        player10.numberOfLoops = 0;
+    }
+    
+    player10.prepareToPlay;
     
 }
 
@@ -564,10 +575,14 @@
             NSLog(@"Animation finished.");
         }];
     } else if ([sender.titleLabel.text isEqualToString:@"ostra"]) {
+        lastPress = @"ostra";
+        
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
             self.ostraOutlet.frame = CGRectMake(40, 122, 240, 240);
         }completion:^(BOOL finished){
             NSLog(@"Animation finished.");
+            player10.currentTime = 0;
+            [player10 play];
         }];
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
             self.oButtonOutlet.frame = CGRectMake(240, 20, 60, 60);
@@ -803,6 +818,8 @@
     
     NSURL *fileURL18 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"uWomanVoice" ofType:@"mp3"]];
     
+    NSURL *fileURL29 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"osowoman" ofType:@"mp3"]];
+    
    
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL14 error:nil];
     if (self.player) {
@@ -867,6 +884,13 @@
     
     player9.prepareToPlay;
     
+    self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL29 error:nil];
+    if (self.player10) {
+        player10.numberOfLoops = 0;
+    }
+    
+    player10.prepareToPlay;
+    
     if ([self.lastPress isEqualToString:@"avion"]) {
         [player2 play];
     } else if ([self.lastPress isEqualToString:@"elefante"]) {
@@ -885,6 +909,8 @@
         [player6 play];
     } else if ([self.lastPress isEqualToString:@"Uu"]) {
         [player7 play];
+    } else if ([self.lastPress isEqualToString:@"ostra"]) {
+        [player10 play];
     }
     
 }
@@ -911,6 +937,8 @@
     NSURL *fileURL8 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"iguanababy" ofType:@"mp3"]];
     //        
     NSURL *fileURL9 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"unicorniobaby" ofType:@"mp3"]];
+    
+    NSURL *fileURL28 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"osobaby" ofType:@"mp3"]];
     
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
     if (self.player) {
@@ -975,6 +1003,15 @@
     
     player9.prepareToPlay;
     
+    self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL28 error:nil];
+    if (self.player10) {
+        player10.numberOfLoops = 0;
+    }
+    
+    player10.prepareToPlay;
+    
+    
+    
     if ([self.lastPress isEqualToString:@"avion"]) {
         [player2 play];
     } else if ([self.lastPress isEqualToString:@"elefante"]) {
@@ -993,7 +1030,131 @@
         [player6 play];
     } else if ([self.lastPress isEqualToString:@"Uu"]) {
         [player7 play];
+    } else if ([self.lastPress isEqualToString:@"ostra"]) {
+        [player10 play];
     }
+
+    
+}
+
+- (IBAction)manPressed:(UIButton *)sender {
+    UIButton *manPressed = [UIButton buttonWithType:UIButtonTypeCustom];
+    [manPressed setTitle:self.lastPress forState:UIControlStateNormal];
+    [self buttonPressed:manPressed];
+    
+    NSURL *fileURL19 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"aManVoice" ofType:@"mp3"]];
+    
+    NSURL *fileURL20 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"avionman" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL21 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"elefanteman" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL22 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"eManVoice" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL23 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"iManVoice" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL24 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"oManVoice" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL25 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"uManVoice" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL26 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"iguanaman" ofType:@"mp3"]];
+    //        
+    NSURL *fileURL27 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"unicornioman" ofType:@"mp3"]];
+    
+    NSURL *fileURL30 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"osoman" ofType:@"mp3"]];
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL19 error:nil];
+    if (self.player) {
+        player.numberOfLoops = 0;
+    }
+    
+    player.prepareToPlay;
+    
+    self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL20 error:nil];
+    if (self.player2) {
+        player2.numberOfLoops = 0;
+    }
+    
+    player2.prepareToPlay;
+    
+    self.player3 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL21 error:nil];
+    if (self.player3) {
+        player3.numberOfLoops = 0;
+    }
+    
+    player3.prepareToPlay;
+    
+    self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL22 error:nil];
+    if (self.player4) {
+        player4.numberOfLoops = 0;
+    }
+    
+    player4.prepareToPlay;
+    
+    self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL23 error:nil];
+    if (self.player5) {
+        player5.numberOfLoops = 0;
+    }
+    
+    player5.prepareToPlay;
+    
+    self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL24 error:nil];
+    if (self.player6) {
+        player6.numberOfLoops = 0;
+    }
+    
+    player6.prepareToPlay;
+    
+    self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL25 error:nil];
+    if (self.player7) {
+        player7.numberOfLoops = 0;
+    }
+    
+    player7.prepareToPlay;
+    
+    self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL26 error:nil];
+    if (self.player8) {
+        player8.numberOfLoops = 0;
+    }
+    
+    player8.prepareToPlay;
+    
+    self.player9 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL27 error:nil];
+    if (self.player9) {
+        player9.numberOfLoops = 0;
+    }
+    
+    player9.prepareToPlay;
+    
+    self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL30 error:nil];
+    if (self.player10) {
+        player10.numberOfLoops = 0;
+    }
+    
+    player10.prepareToPlay;
+    
+    if ([self.lastPress isEqualToString:@"avion"]) {
+        [player2 play];
+    } else if ([self.lastPress isEqualToString:@"elefante"]) {
+        [player3 play];
+    } else if ([self.lastPress isEqualToString:@"iguana"]) {
+        [player8 play];
+    } else if ([self.lastPress isEqualToString:@"unicornio"]) {
+        [player9 play];
+    } else if ([self.lastPress isEqualToString:@"Aa"]) {
+        [player play];
+    } else if ([self.lastPress isEqualToString:@"Ee"]) {
+        [player4 play];
+    } else if ([self.lastPress isEqualToString:@"Ii"]) {
+        [player5 play];
+    } else if ([self.lastPress isEqualToString:@"Oo"]) {
+        [player6 play];
+    } else if ([self.lastPress isEqualToString:@"Uu"]) {
+        [player7 play];
+    } else if ([self.lastPress isEqualToString:@"ostra"]) {
+        [player10 play];
+    }
+
+
     
 }
 @end
