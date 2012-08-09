@@ -21,6 +21,8 @@
 @property (nonatomic, strong) AVAudioPlayer *player8;
 @property (nonatomic, strong) AVAudioPlayer *player9;
 @property (nonatomic, strong) AVAudioPlayer *player10;
+//@property (nonatomic, strong) AVAudioPlayer *openingAudio;
+
 
 @end
 
@@ -51,6 +53,8 @@
 @synthesize player10;
 @synthesize lastPress;
 @synthesize homeButton;
+//@synthesize openingAudio;
+
 
 
 - (void)viewDidLoad
@@ -59,7 +63,7 @@
 	// Do any additional setup after loading the view, typically from a nib.\
     
     NSURL *url = [[NSBundle mainBundle]
-                  URLForResource:@"opening2" withExtension:@"mp4"];
+                  URLForResource:@"Opening_final" withExtension:@"mp4"];
     self.openPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
     self.openPlayer.controlStyle = MPMovieControlStyleNone;
     self.openPlayer.shouldAutoplay = YES;
@@ -82,40 +86,50 @@
          [weakself.openPlayer.view removeFromSuperview];
          
      }];
+    
+//    NSURL *openingURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"VocalesOpeningAudio" ofType:@"mp3"]];
+//    
+//    self.openingAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:openingURL error:nil];
+//    if (self.openingAudio) {
+//        openingAudio.numberOfLoops = 0;
+//    }
+//    
+//    [openingAudio prepareToPlay];
+//    [openingAudio play];
 
 
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.aButtonOutlet.frame = CGRectMake(130, 91, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.uButtonOutlet.frame = CGRectMake(130, 310, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.eButtonOutlet.frame = CGRectMake(20, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.iButtonOutlet.frame = CGRectMake(130, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.oButtonOutlet.frame = CGRectMake(240, 200, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
     
-    [UIView animateWithDuration:1.0 delay:8.0 options:UIViewAnimationCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.0 delay:7.0 options:UIViewAnimationCurveEaseInOut animations:^{
         self.homeButton.frame = CGRectMake(20, 20, 60, 60);
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
@@ -1195,4 +1209,5 @@
 
     
 }
+
 @end

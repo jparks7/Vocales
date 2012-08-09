@@ -46,6 +46,8 @@
 		5BCB0AB715D4182E005B6759 /* oso.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AB615D4182E005B6759 /* oso.png */; };
 		5BCB0ABD15D42094005B6759 /* opening2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0ABC15D42094005B6759 /* opening2.mp4 */; };
 		5BCB0ABF15D42154005B6759 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCB0ABE15D42154005B6759 /* MediaPlayer.framework */; };
+		5BCB0AC315D44C66005B6759 /* VocalesOpeningAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AC215D44C66005B6759 /* VocalesOpeningAudio.mp3 */; };
+		5BCB0AC515D45019005B6759 /* Opening_final.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB0AC415D45019005B6759 /* Opening_final.mp4 */; };
 		5BDC47F915D2B28600F01FA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDC47F815D2B28600F01FA3 /* AVFoundation.framework */; };
 		5BDC47FB15D2B4DD00F01FA3 /* aBabyVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC47FA15D2B4DC00F01FA3 /* aBabyVoice.mp3 */; };
 		5BDC481415D2BE8000F01FA3 /* avionBaby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC481315D2BE8000F01FA3 /* avionBaby.mp3 */; };
@@ -114,6 +116,8 @@
 		5BCB0AB615D4182E005B6759 /* oso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oso.png; path = Images/oso.png; sourceTree = SOURCE_ROOT; };
 		5BCB0ABC15D42094005B6759 /* opening2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = opening2.mp4; sourceTree = SOURCE_ROOT; };
 		5BCB0ABE15D42154005B6759 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5BCB0AC215D44C66005B6759 /* VocalesOpeningAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VocalesOpeningAudio.mp3; sourceTree = SOURCE_ROOT; };
+		5BCB0AC415D45019005B6759 /* Opening_final.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Opening_final.mp4; sourceTree = SOURCE_ROOT; };
 		5BDC47F815D2B28600F01FA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5BDC47FA15D2B4DC00F01FA3 /* aBabyVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = aBabyVoice.mp3; path = ../aBabyVoice.mp3; sourceTree = "<group>"; };
 		5BDC481315D2BE8000F01FA3 /* avionBaby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = avionBaby.mp3; sourceTree = SOURCE_ROOT; };
@@ -266,7 +270,9 @@
 				5BCB0AB015D4149F005B6759 /* osobaby.mp3 */,
 				5BCB0AB115D4149F005B6759 /* osoman.mp3 */,
 				5BCB0AB215D4149F005B6759 /* osowoman.mp3 */,
+				5BCB0AC215D44C66005B6759 /* VocalesOpeningAudio.mp3 */,
 				5BCB0ABC15D42094005B6759 /* opening2.mp4 */,
+				5BCB0AC415D45019005B6759 /* Opening_final.mp4 */,
 				5BDC47FC15D2B5FC00F01FA3 /* Images */,
 				E3CBE76715D1ECC400F2DB45 /* Supporting Files */,
 			);
@@ -392,6 +398,8 @@
 				5BCB0AB515D4149F005B6759 /* osowoman.mp3 in Resources */,
 				5BCB0AB715D4182E005B6759 /* oso.png in Resources */,
 				5BCB0ABD15D42094005B6759 /* opening2.mp4 in Resources */,
+				5BCB0AC315D44C66005B6759 /* VocalesOpeningAudio.mp3 in Resources */,
+				5BCB0AC515D45019005B6759 /* Opening_final.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
