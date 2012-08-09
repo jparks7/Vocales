@@ -793,6 +793,24 @@
     
     NSURL *fileURL13 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"unicorniowoman" ofType:@"mp3"]];
     
+    NSURL *fileURL14 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"aWomanVoice" ofType:@"mp3"]];
+    
+    NSURL *fileURL15 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"eWomanVoice" ofType:@"mp3"]];
+    
+    NSURL *fileURL16 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"iWomanVoice" ofType:@"mp3"]];
+    
+    NSURL *fileURL17 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"oWomanVoice" ofType:@"mp3"]];
+    
+    NSURL *fileURL18 = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"uWomanVoice" ofType:@"mp3"]];
+    
+   
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL14 error:nil];
+    if (self.player) {
+        player.numberOfLoops = 0;
+    }
+    
+    player.prepareToPlay;
+    
     self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL10 error:nil];
     if (self.player2) {
         player2.numberOfLoops = 0;
@@ -806,6 +824,34 @@
     }
     
     player3.prepareToPlay;
+    
+    self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL15 error:nil];
+    if (self.player4) {
+        player4.numberOfLoops = 0;
+    }
+    
+    player4.prepareToPlay;
+    
+    self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL16 error:nil];
+    if (self.player5) {
+        player5.numberOfLoops = 0;
+    }
+    
+    player5.prepareToPlay;
+    
+    self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL17 error:nil];
+    if (self.player6) {
+        player6.numberOfLoops = 0;
+    }
+    
+    player6.prepareToPlay;
+    
+    self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL18 error:nil];
+    if (self.player7) {
+        player7.numberOfLoops = 0;
+    }
+    
+    player7.prepareToPlay;
     
     self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL12 error:nil];
     if (self.player8) {
@@ -829,6 +875,16 @@
         [player8 play];
     } else if ([self.lastPress isEqualToString:@"unicornio"]) {
         [player9 play];
+    } else if ([self.lastPress isEqualToString:@"Ee"]) {
+        [player4 play];
+    } else if ([self.lastPress isEqualToString:@"Aa"]) {
+        [player play];
+    } else if ([self.lastPress isEqualToString:@"Ii"]) {
+        [player5 play];
+    } else if ([self.lastPress isEqualToString:@"Oo"]) {
+        [player6 play];
+    } else if ([self.lastPress isEqualToString:@"Uu"]) {
+        [player7 play];
     }
     
 }
