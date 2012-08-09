@@ -49,6 +49,7 @@
 @synthesize player9;
 @synthesize player10;
 @synthesize lastPress;
+@synthesize homeButton;
 
 - (void)viewDidLoad
 {
@@ -84,6 +85,12 @@
     }completion:^(BOOL finished){
         NSLog(@"Animation finished.");
     }];
+    
+    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+        self.homeButton.frame = CGRectMake(20, 20, 60, 60);
+    }completion:^(BOOL finished){
+        NSLog(@"Animation finished.");
+    }];
 
     
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"aBabyVoice" ofType:@"mp3"]];
@@ -112,70 +119,71 @@
         player.numberOfLoops = 0;
     }
     
-    player.prepareToPlay;
+    [player prepareToPlay];
+    
     
     self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL2 error:nil];
     if (self.player2) {
         player2.numberOfLoops = 0;
     }
     
-    player2.prepareToPlay;
+    [player2 prepareToPlay];
     
     self.player3 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL3 error:nil];
     if (self.player3) {
         player3.numberOfLoops = 0;
     }
     
-    player3.prepareToPlay;
+    [player3 prepareToPlay];
     
     self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL4 error:nil];
     if (self.player4) {
         player4.numberOfLoops = 0;
     }
     
-    player4.prepareToPlay;
+    [player4 prepareToPlay];
     
     self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL5 error:nil];
     if (self.player5) {
         player5.numberOfLoops = 0;
     }
     
-    player5.prepareToPlay;
+    [player5 prepareToPlay];
     
     self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL6 error:nil];
     if (self.player6) {
         player6.numberOfLoops = 0;
     }
     
-    player6.prepareToPlay;
+    [player6 prepareToPlay];
     
     self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL7 error:nil];
     if (self.player7) {
         player7.numberOfLoops = 0;
     }
     
-    player7.prepareToPlay;
+    [player7 prepareToPlay];
     
     self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL8 error:nil];
     if (self.player8) {
         player8.numberOfLoops = 0;
     }
     
-    player8.prepareToPlay;
+    [player8 prepareToPlay];
     
     self.player9 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL9 error:nil];
     if (self.player9) {
         player9.numberOfLoops = 0;
     }
     
-    player9.prepareToPlay;
+    [player9 prepareToPlay];
     
     self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL28 error:nil];
     if (self.player10) {
         player10.numberOfLoops = 0;
     }
     
-    player10.prepareToPlay;
+    [player10 prepareToPlay];
     
 }
 
@@ -194,6 +202,7 @@
     [self setBabyOutlet:nil];
     [self setWomanOutlet:nil];
     [self setOstraOutlet:nil];
+    [self setHomeButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -427,7 +436,7 @@
         }];
         
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
-            self.ostraOutlet.frame = CGRectMake(240, 20, 60, 60);
+            self.ostraOutlet.frame = CGRectMake(240, 12, 60, 75);
         }completion:^(BOOL finished){
             NSLog(@"Animation finished.");
         }];
@@ -578,7 +587,7 @@
         lastPress = @"ostra";
         
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
-            self.ostraOutlet.frame = CGRectMake(40, 122, 240, 240);
+            self.ostraOutlet.frame = CGRectMake(70, 117, 180, 225);
         }completion:^(BOOL finished){
             NSLog(@"Animation finished.");
             player10.currentTime = 0;
@@ -826,70 +835,70 @@
         player.numberOfLoops = 0;
     }
     
-    player.prepareToPlay;
+    [player prepareToPlay];
     
     self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL10 error:nil];
     if (self.player2) {
         player2.numberOfLoops = 0;
     }
     
-    player2.prepareToPlay;
+    [player2 prepareToPlay];
     
     self.player3 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL11 error:nil];
     if (self.player3) {
         player3.numberOfLoops = 0;
     }
     
-    player3.prepareToPlay;
+    [player3 prepareToPlay];
     
     self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL15 error:nil];
     if (self.player4) {
         player4.numberOfLoops = 0;
     }
     
-    player4.prepareToPlay;
+    [player4 prepareToPlay];
     
     self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL16 error:nil];
     if (self.player5) {
         player5.numberOfLoops = 0;
     }
     
-    player5.prepareToPlay;
+    [player5 prepareToPlay];
     
     self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL17 error:nil];
     if (self.player6) {
         player6.numberOfLoops = 0;
     }
     
-    player6.prepareToPlay;
+    [player6 prepareToPlay];
     
     self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL18 error:nil];
     if (self.player7) {
         player7.numberOfLoops = 0;
     }
     
-    player7.prepareToPlay;
+    [player7 prepareToPlay];
     
     self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL12 error:nil];
     if (self.player8) {
         player8.numberOfLoops = 0;
     }
     
-    player8.prepareToPlay;
+    [player8 prepareToPlay];
     
     self.player9 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL13 error:nil];
     if (self.player9) {
         player9.numberOfLoops = 0;
     }
     
-    player9.prepareToPlay;
+    [player9 prepareToPlay];
     
     self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL29 error:nil];
     if (self.player10) {
         player10.numberOfLoops = 0;
     }
     
-    player10.prepareToPlay;
+    [player10 prepareToPlay];
     
     if ([self.lastPress isEqualToString:@"avion"]) {
         [player2 play];
@@ -945,70 +954,70 @@
         player.numberOfLoops = 0;
     }
     
-    player.prepareToPlay;
+    [player prepareToPlay];
     
     self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL2 error:nil];
     if (self.player2) {
         player2.numberOfLoops = 0;
     }
     
-    player2.prepareToPlay;
+    [player2 prepareToPlay];
     
     self.player3 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL3 error:nil];
     if (self.player3) {
         player3.numberOfLoops = 0;
     }
     
-    player3.prepareToPlay;
+    [player3 prepareToPlay];
     
     self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL4 error:nil];
     if (self.player4) {
         player4.numberOfLoops = 0;
     }
     
-    player4.prepareToPlay;
+    [player4 prepareToPlay];
     
     self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL5 error:nil];
     if (self.player5) {
         player5.numberOfLoops = 0;
     }
     
-    player5.prepareToPlay;
+    [player5 prepareToPlay];
     
     self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL6 error:nil];
     if (self.player6) {
         player6.numberOfLoops = 0;
     }
     
-    player6.prepareToPlay;
+    [player6 prepareToPlay];
     
     self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL7 error:nil];
     if (self.player7) {
         player7.numberOfLoops = 0;
     }
     
-    player7.prepareToPlay;
+    [player7 prepareToPlay];
     
     self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL8 error:nil];
     if (self.player8) {
         player8.numberOfLoops = 0;
     }
     
-    player8.prepareToPlay;
+    [player8 prepareToPlay];
     
     self.player9 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL9 error:nil];
     if (self.player9) {
         player9.numberOfLoops = 0;
     }
     
-    player9.prepareToPlay;
+    [player9 prepareToPlay];
     
     self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL28 error:nil];
     if (self.player10) {
         player10.numberOfLoops = 0;
     }
     
-    player10.prepareToPlay;
+    [player10 prepareToPlay];
     
     
     
@@ -1067,70 +1076,70 @@
         player.numberOfLoops = 0;
     }
     
-    player.prepareToPlay;
+    [player prepareToPlay];
     
     self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL20 error:nil];
     if (self.player2) {
         player2.numberOfLoops = 0;
     }
     
-    player2.prepareToPlay;
+    [player2 prepareToPlay];
     
     self.player3 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL21 error:nil];
     if (self.player3) {
         player3.numberOfLoops = 0;
     }
     
-    player3.prepareToPlay;
+    [player3 prepareToPlay];
     
     self.player4 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL22 error:nil];
     if (self.player4) {
         player4.numberOfLoops = 0;
     }
     
-    player4.prepareToPlay;
+    [player4 prepareToPlay];
     
     self.player5 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL23 error:nil];
     if (self.player5) {
         player5.numberOfLoops = 0;
     }
     
-    player5.prepareToPlay;
+    [player5 prepareToPlay];
     
     self.player6 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL24 error:nil];
     if (self.player6) {
         player6.numberOfLoops = 0;
     }
     
-    player6.prepareToPlay;
+    [player6 prepareToPlay];
     
     self.player7 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL25 error:nil];
     if (self.player7) {
         player7.numberOfLoops = 0;
     }
     
-    player7.prepareToPlay;
+    [player7 prepareToPlay];
     
     self.player8 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL26 error:nil];
     if (self.player8) {
         player8.numberOfLoops = 0;
     }
     
-    player8.prepareToPlay;
+    [player8 prepareToPlay];
     
     self.player9 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL27 error:nil];
     if (self.player9) {
         player9.numberOfLoops = 0;
     }
     
-    player9.prepareToPlay;
+    [player9 prepareToPlay];
     
     self.player10 = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL30 error:nil];
     if (self.player10) {
         player10.numberOfLoops = 0;
     }
     
-    player10.prepareToPlay;
+    [player10 prepareToPlay];
     
     if ([self.lastPress isEqualToString:@"avion"]) {
         [player2 play];

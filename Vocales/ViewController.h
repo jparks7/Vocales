@@ -32,6 +32,7 @@
 - (IBAction)homeButtonPressed:(UIButton *)sender;
 
 @property (strong, nonatomic) NSString *lastPress;
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
 
 - (IBAction)womanPressed:(UIButton *)sender;
 - (IBAction)babyPressed:(UIButton *)sender;
