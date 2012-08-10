@@ -1286,7 +1286,7 @@
     } else if ([lastPress isEqualToString:@"Ii"]) {
         
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
-            self.iButtonOutlet.frame = CGRectMake(130, 499, 60, 60);
+            self.iButtonOutlet.frame = CGRectMake(130, -90, 60, 60);
         }completion:^(BOOL finished){
             NSLog(@"Animation finished.");
         }];
