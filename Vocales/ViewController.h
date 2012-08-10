@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) MPMoviePlayerController * openPlayer;
 @property (weak, nonatomic) IBOutlet UIButton *aButtonOutlet;
+@property (nonatomic, strong) IBOutlet UISwipeGestureRecognizer *swipeRightRecognizer;
 
 
 - (IBAction)buttonPressed:(UIButton *)sender;
@@ -41,5 +42,7 @@
 - (IBAction)womanPressed:(UIButton *)sender;
 - (IBAction)babyPressed:(UIButton *)sender;
 - (IBAction)manPressed:(UIButton *)sender;
+
+- (IBAction)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer;
 
 @end

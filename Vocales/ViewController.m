@@ -53,6 +53,8 @@
 @synthesize player10;
 @synthesize lastPress;
 @synthesize homeButton;
+@synthesize swipeRightRecognizer = _swipeRightRecognizer;
+
 //@synthesize openingAudio;
 
 
@@ -86,6 +88,8 @@
          [weakself.openPlayer.view removeFromSuperview];
          
      }];
+    
+    [self.view addGestureRecognizer:self.swipeRightRecognizer];
     
 //    NSURL *openingURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"VocalesOpeningAudio" ofType:@"mp3"]];
 //    
@@ -1209,5 +1213,45 @@
 
     
 }
+
+- (IBAction)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
+    
+    CGPoint location = [recognizer locationInView:self.view];
+	if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        location.x -= 220.0;
+    } else {
+        location.x += 220.0;
+    }
+    
+    if ([lastPress isEqualToString:@"Aa"]) {
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.aButtonOutlet.frame = CGRectMake(130, -90, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.eButtonOutlet.frame = CGRectMake(40, 122, 240, 240);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+            player4.currentTime = 0;
+            [player4 play];
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.avionOutlet.frame = CGRectMake(400, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.elefanteOutlet.frame = CGRectMake(240, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+    }
+}
+
+
 
 @end

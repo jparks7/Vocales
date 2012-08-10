@@ -17,6 +17,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BACKGROUND.png" id="8ig-4l-EMg">
                                 <rect key="frame" x="0.0" y="-23" width="385" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="un5-Ri-Tzv" appends="YES" id="Hp5-xO-DC0"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sFY-VN-j08">
                                 <rect key="frame" x="130" y="-90" width="60" height="60"/>
@@ -244,11 +248,17 @@
                         <outlet property="manOutlet" destination="AL2-Ll-j5F" id="VsN-IC-B1d"/>
                         <outlet property="oButtonOutlet" destination="TSc-aD-9pK" id="Zxh-od-Exq"/>
                         <outlet property="ostraOutlet" destination="GSx-u0-Dqi" id="Y2z-Js-cjr"/>
+                        <outlet property="swipeRightRecognizer" destination="un5-Ri-Tzv" id="C9m-ye-9O9"/>
                         <outlet property="uButtonOutlet" destination="Red-Zg-bYb" id="tPd-bz-cXL"/>
                         <outlet property="unicornioOutlet" destination="Nt6-Ln-EZV" id="fAi-ct-fS3"/>
                         <outlet property="womanOutlet" destination="mQb-7m-Nqx" id="Ccz-P5-je7"/>
                     </connections>
                 </viewController>
+                <swipeGestureRecognizer direction="left" id="un5-Ri-Tzv">
+                    <connections>
+                        <action selector="handleSwipeFrom:" destination="2" id="AdY-O1-IkS"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-737" y="125"/>
         </scene>
@@ -276,6 +286,7 @@
             <relationships>
                 <relationship kind="action" name="babyPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="handleSwipeFrom:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="action" name="homeButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="manPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="womanPressed:" candidateClass="UIButton"/>
@@ -290,6 +301,7 @@
                 <relationship kind="outlet" name="manOutlet" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="oButtonOutlet" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="ostraOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="swipeRightRecognizer" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="uButtonOutlet" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="unicornioOutlet" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="womanOutlet" candidateClass="UIButton"/>
