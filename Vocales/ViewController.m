@@ -1224,6 +1224,7 @@
     }
     
     if ([lastPress isEqualToString:@"Aa"]) {
+
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
             self.aButtonOutlet.frame = CGRectMake(130, -90, 60, 60);
         }completion:^(BOOL finished){
@@ -1249,6 +1250,128 @@
         }completion:^(BOOL finished){
             NSLog(@"Animation finished.");
         }];
+        
+        lastPress = @"Ee";
+        
+    } else if ([lastPress isEqualToString:@"Ee"]) {
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.eButtonOutlet.frame = CGRectMake(-90, 200, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.iButtonOutlet.frame = CGRectMake(40, 122, 240, 240);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+            player5.currentTime = 0;
+            [player5 play];
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.elefanteOutlet.frame = CGRectMake(401, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.iguanaOutlet.frame = CGRectMake(180, 20, 120, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        lastPress = @"Ii";
+        
+    } else if ([lastPress isEqualToString:@"Ii"]) {
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.iButtonOutlet.frame = CGRectMake(130, 499, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.oButtonOutlet.frame = CGRectMake(40, 122, 240, 240);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+            player6.currentTime = 0;
+            [player6 play];
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.ostraOutlet.frame = CGRectMake(240, 12, 60, 75);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.iguanaOutlet.frame = CGRectMake(403, 20, 120, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        lastPress = @"Oo";
+        
+    } else if ([lastPress isEqualToString:@"Oo"]) {
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.uButtonOutlet.frame = CGRectMake(40, 122, 240, 240);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+            player7.currentTime = 0;
+            [player7 play];
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.oButtonOutlet.frame = CGRectMake(500, 200, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.ostraOutlet.frame = CGRectMake(404, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.unicornioOutlet.frame = CGRectMake(240, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        lastPress = @"Uu";
+        
+    } else if ([lastPress isEqualToString:@"Uu"]) {
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.aButtonOutlet.frame = CGRectMake(40, 122, 240, 240);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+            player.currentTime = 0;
+            [player play];
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.avionOutlet.frame = CGRectMake(240, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.unicornioOutlet.frame = CGRectMake(402, 20, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.uButtonOutlet.frame = CGRectMake(130, 500, 60, 60);
+        }completion:^(BOOL finished){
+            NSLog(@"Animation finished.");
+        }];
+        
+        lastPress = @"Aa";
     }
 }
 
